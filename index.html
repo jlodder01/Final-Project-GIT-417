@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carousel Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+<h1>
+  <span class="hamburger" id="hamburgerBtn">&#9776;</span>
+  CHANEL
+</h1>
+<nav id="mobileMenu" class="mobile-menu">
+    <a href="#">Home</a>
+    <a href="#">Projects</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+
+
+<!-- CAROUSEL -->
+<div class="carousel-container">
+
+  <div id="carouselSlide" class="carousel-track">
+  <div class="carousel-slide">
+    <img src="./images/chanel.png" alt="">
+    <div class="carousel-caption">
+      <h2 class="slide-title">History of our brand</h2>
+      <p class="slide-description">Find out more about Chanel.</p>
+    </div>
+  </div>
+
+  <div class="carousel-slide">
+    <img src="./images/girl.png" alt="">
+    <div class="carousel-caption">
+      <h2 class="slide-title">Accessories</h2>
+      <p class="slide-description">View our accessories page.</p>
+    </div>
+  </div>
+
+  <!-- FIXED: added carousel-slide class -->
+  <div class="carousel-slide">
+    <img src="./images/shop.png" alt="">
+    <div class="carousel-caption">
+      <h2 class="slide-title">Store Across the World</h2>
+      <p class="slide-description">Browse stores across the world.</p>
+    </div>
+  </div>
+  </div>
+
+  <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+  <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+</div>
+
+<div class="carousel-dots" id="carouselDots"></div>
+
+
+<!-- PHOTO GRID -->
+<div class="photo-grid">
+
+  <div class="photo-box">
+    <img src="./images/Screenshot 2025-11-23 at 10.15.03 AM.png" alt="">
+    <p>Classic Handbag</p>
+  </div>
+
+  <div class="photo-box">
+    <img src="./images/handbag2.png" alt="">
+    <p>Classic Handbag 2.0</p>
+  </div>
+
+  <div class="photo-box">
+    <img src="images/Screenshot 2025-11-23 at 10.15.41 AM.png" alt="">
+    <p>Classic Handbag 3.0</p>
+  </div>
+
+  <div class="photo-box">
+    <img src="images/Screenshot 2025-11-23 at 10.15.58 AM.png" alt="">
+    <p>Classic Handbag 4.0</p>
+  </div>
+
+  <div class="photo-box">
+    <img src="images/Screenshot 2025-11-25 at 1.31.14 PM.png" alt="">
+    <p>Classic Handbag 5.0</p>
+  </div>
+
+  <div class="photo-box">
+    <img src="images/Screenshot 2025-11-25 at 1.31.14 PM.png" alt="">
+    <p>Classic Handbag 6.0</p>
+  </div>
+</div>
+
+<!-- NUMBER GUESSING GAME -->
+<div class="document">
+  <div class="page-wrapper">
+    <div class="number-guessing-game">
+
+      <h2 class="heading">Number Guessing Game</h2>
+
+      <p class="paragraph">Guess a number between 1 and 10</p>
+
+      <form class="form" id="guessForm">
+        <label class="label">Your Guess</label>
+
+        <div class="number-input">
+          <input type="number" id="userGuess" min="1" max="10" placeholder="Enter a number 1-10">
+        </div>
+
+        <button onclick="handleGuess(event)" type="button" class="submit-button" id="submitGuess">
+          Submit Guess
+        </button>
+      </form>
+
+      <p id="resultMessage" class="paragraph"></p>
+
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT FORM -->
+<div class="form-container">
+  <h2 class="form-title">Contact Form</h2>
+
+  <div id="successMessage" class="success-message hidden">
+    <strong>Success!</strong> Your form has been submitted.
+  </div>
+
+  <form id="contactForm" class="form-fields">
+
+    <div class="form-group">
+      <label>Full Name <span class="required">*</span></label>
+      <input type="text" id="fullName" placeholder="John Doe">
+      <p class="error-text" id="fullNameError"></p>
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number <span class="required">*</span></label>
+      <input type="tel" id="phoneNumber" placeholder="(123) 456-7890">
+      <p class="error-text" id="phoneNumberError"></p>
+    </div>
+
+    <div class="form-group">
+      <label>Preferred Contact Method</label>
+      <div class="radio-row">
+        <label><input type="radio" name="preferredContact" value="phone"> Phone</label>
+        <label><input type="radio" name="preferredContact" value="email" checked> Email</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Comments</label>
+      <textarea id="comments" rows="4"></textarea>
+    </div>
+
+    <button type="submit" id="submitButton" class="submit-btn blue">Submit</button>
+  </form>
+</div>
+
+<!-- THEME TOGGLE BUTTON (CORRECT LOCATION) -->
+<button id="themeToggle" class="theme-toggle">
+  <span class="icon sun">☀️</span>
+  <span class="icon moon">🌙</span>
+</button>
+
+<footer></footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
